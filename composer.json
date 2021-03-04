@@ -1,0 +1,31 @@
+{
+    "name": "parfaitementweb/statamic-podcast-publisher",
+    "description": "Statamic addon for publishing your podcast",
+    "autoload": {
+        "psr-4": {
+            "Parfaitement\\Podcast\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alexis Serneels"
+        }
+    ],
+    "support": {
+        "email": "addons@parfaitementweb.com"
+    },
+    "extra": {
+        "statamic": {
+            "name": "Podcast Publisher",
+            "description": "Statamic addon for publishing your podcast"
+        },
+        "laravel": {
+            "providers": [
+                "Parfaitement\\Podcast\\ServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "aryehraber/statamic-uuid": "^2.0"
+    }
+}

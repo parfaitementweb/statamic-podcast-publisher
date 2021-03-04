@@ -1,0 +1,10 @@
+title: Episodes
+template: podcast/episode
+layout: layout
+revisions: false
+route: '/episode/{slug}'
+date: true
+sort_dir: desc
+date_behavior:
+  past: public
+  future: private

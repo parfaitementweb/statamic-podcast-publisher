@@ -1,0 +1,508 @@
+sections:
+  podcast:
+    display: Podcast
+    fields:
+      -
+        handle: name
+        field:
+          input_type: text
+          antlers: false
+          display: 'Podcast Name'
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+          instructions: 'Used in podcast players, e.g. Apple Podcasts, Spotify; this title will display in all podcast directories and players.'
+          placeholder: 'Show title'
+      -
+        handle: subtitle
+        field:
+          input_type: text
+          antlers: false
+          display: Subtitle
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+          instructions: 'Used in some podcast search results.'
+      -
+        handle: image
+        field:
+          mode: grid
+          container: assets
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Podcast Art'
+          type: assets
+          icon: assets
+          listable: hidden
+      -
+        handle: description
+        field:
+          antlers: false
+          display: Description
+          type: textarea
+          icon: textarea
+          listable: hidden
+          validate:
+            - required
+  main:
+    display: Author
+    fields:
+      -
+        handle: author_name
+        field:
+          input_type: text
+          antlers: false
+          display: 'Author Name'
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+          instructions: 'The name of the host or creator brand. Do not spam this with keywords or other peoples’ names, you may get banned from Apple Podcasts etc.'
+          placeholder: 'John Mcclane'
+      -
+        handle: author_email
+        field:
+          input_type: email
+          antlers: false
+          display: 'Author email address'
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+          instructions: 'This is the email address that will be attached to the podcast. For Apple Podcasts, it’s useful to use your iTunes email address.'
+          placeholder: Johnmaclane@topofthebuilding.com
+  show_settings:
+    display: 'Show Settings'
+    fields:
+      -
+        handle: main_category
+        field:
+          options:
+            Arts: Arts
+            'Arts > Books': 'Arts > Books'
+            'Arts > Design': 'Arts > Design'
+            'Arts > Fashion & Beauty': 'Arts > Fashion & Beauty'
+            'Arts > Food': 'Arts > Food'
+            'Arts > Performing Arts': 'Arts > Performing Arts'
+            'Arts > Visual Arts': 'Arts > Visual Arts'
+            Business: Business
+            'Business > Careers': 'Business > Careers'
+            'Business > Entrepreneurship': 'Business > Entrepreneurship'
+            'Business > Investing': 'Business > Investing'
+            'Business > Management': 'Business > Management'
+            'Business > Marketing': 'Business > Marketing'
+            'Business > Non-Profit': 'Business > Non-Profit'
+            Comedy: Comedy
+            'Comedy > Comedy Interviews': 'Comedy > Comedy Interviews'
+            'Comedy > Improv': 'Comedy > Improv'
+            'Comedy > Stand-Up': 'Comedy > Stand-Up'
+            Education: Education
+            'Education > Courses': 'Education > Courses'
+            'Education > How To': 'Education > How To'
+            'Education > Language Learning': 'Education > Language Learning'
+            'Education > Self-Improvement': 'Education > Self-Improvement'
+            Fiction: Fiction
+            'Fiction > Comedy Fiction': 'Fiction > Comedy Fiction'
+            'Fiction > Drama': 'Fiction > Drama'
+            'Fiction > Science Fiction': 'Fiction > Science Fiction'
+            Government: Government
+            History: History
+            'Health & Fitness': 'Health & Fitness'
+            'Health & Fitness > Alternative Health': 'Health & Fitness > Alternative Health'
+            'Health & Fitness > Fitness': 'Health & Fitness > Fitness'
+            'Health & Fitness > Medicine': 'Health & Fitness > Medicine'
+            'Health & Fitness > Mental Health': 'Health & Fitness > Mental Health'
+            'Health & Fitness > Nutrition': 'Health & Fitness > Nutrition'
+            'Health & Fitness > Sexuality': 'Health & Fitness > Sexuality'
+            'Kids & Family': 'Kids & Family'
+            'Kids & Family > Education for Kids': 'Kids & Family > Education for Kids'
+            'Kids & Family > Parenting': 'Kids & Family > Parenting'
+            'Kids & Family > Pets & Animals': 'Kids & Family > Pets & Animals'
+            'Kids & Family > Stories for Kids': 'Kids & Family > Stories for Kids'
+            Leisure: Leisure
+            'Leisure > Animation & Manga': 'Leisure > Animation & Manga'
+            'Leisure > Automotive': 'Leisure > Automotive'
+            'Leisure > Aviation': 'Leisure > Aviation'
+            'Leisure > Crafts': 'Leisure > Crafts'
+            'Leisure > Games': 'Leisure > Games'
+            'Leisure > Hobbies': 'Leisure > Hobbies'
+            'Leisure > Home & Garden': 'Leisure > Home & Garden'
+            'Leisure > Video Games': 'Leisure > Video Games'
+            Music: Music
+            'Music > Music Commentary': 'Music > Music Commentary'
+            'Music > Music History': 'Music > Music History'
+            'Music > Music Interviews': 'Music > Music Interviews'
+            News: News
+            'News > Business News': 'News > Business News'
+            'News > Daily News': 'News > Daily News'
+            'News > Entertainment News': 'News > Entertainment News'
+            'News > News Commentary': 'News > News Commentary'
+            'News > Politics': 'News > Politics'
+            'News > Sports News': 'News > Sports News'
+            'News > Tech News': 'News > Tech News'
+            'Religion & Spirituality': 'Religion & Spirituality'
+            'Religion & Spirituality > Buddhism': 'Religion & Spirituality > Buddhism'
+            'Religion & Spirituality > Christianity': 'Religion & Spirituality > Christianity'
+            'Religion & Spirituality > Hinduism': 'Religion & Spirituality > Hinduism'
+            'Religion & Spirituality > Islam': 'Religion & Spirituality > Islam'
+            'Religion & Spirituality > Judaism': 'Religion & Spirituality > Judaism'
+            'Religion & Spirituality > Religion': 'Religion & Spirituality > Religion'
+            'Religion & Spirituality > Spirituality': 'Religion & Spirituality > Spirituality'
+            Science: Science
+            'Science > Astronomy': 'Science > Astronomy'
+            'Science > Chemistry': 'Science > Chemistry'
+            'Science > Earth Sciences': 'Science > Earth Sciences'
+            'Science > Life Sciences': 'Science > Life Sciences'
+            'Science > Mathematics': 'Science > Mathematics'
+            'Science > Natural Sciences': 'Science > Natural Sciences'
+            'Science > Nature': 'Science > Nature'
+            'Science > Physics': 'Science > Physics'
+            'Science > Social Sciences': 'Science > Social Sciences'
+            'Society & Culture': 'Society & Culture'
+            'Society & Culture > Documentary': 'Society & Culture > Documentary'
+            'Society & Culture > Personal Journals': 'Society & Culture > Personal Journals'
+            'Society & Culture > Philosophy': 'Society & Culture > Philosophy'
+            'Society & Culture > Places & Travel': 'Society & Culture > Places & Travel'
+            'Society & Culture > Relationships': 'Society & Culture > Relationships'
+            Sports: Sports
+            'Sports > Baseball': 'Sports > Baseball'
+            'Sports > Basketball': 'Sports > Basketball'
+            'Sports > Cricket': 'Sports > Cricket'
+            'Sports > Fantasy Sports': 'Sports > Fantasy Sports'
+            'Sports > Football': 'Sports > Football'
+            'Sports > Golf': 'Sports > Golf'
+            'Sports > Hockey': 'Sports > Hockey'
+            'Sports > Rugby': 'Sports > Rugby'
+            'Sports > Running': 'Sports > Running'
+            'Sports > Soccer': 'Sports > Soccer'
+            'Sports > Swimming': 'Sports > Swimming'
+            'Sports > Tennis': 'Sports > Tennis'
+            'Sports > Volleyball': 'Sports > Volleyball'
+            'Sports > Wilderness': 'Sports > Wilderness'
+            'Sports > Wrestling': 'Sports > Wrestling'
+            Technology: Technology
+            'True Crime': 'True Crime'
+            'TV & Film': 'TV & Film'
+            'TV & Film > After Shows': 'TV & Film > After Shows'
+            'TV & Film > Film History': 'TV & Film > Film History'
+            'TV & Film > Film Interviews': 'TV & Film > Film Interviews'
+            'TV & Film > Film Reviews': 'TV & Film > Film Reviews'
+            'TV & Film > TV Reviews': 'TV & Film > TV Reviews'
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: 'Main Category'
+          type: select
+          icon: select
+          listable: hidden
+          instructions: 'The primary category your show will appear in when browsing podcast apps.'
+          validate:
+            - required
+      -
+        handle: second_category
+        field:
+          options:
+            Arts: Arts
+            'Arts > Books': 'Arts > Books'
+            'Arts > Design': 'Arts > Design'
+            'Arts > Fashion & Beauty': 'Arts > Fashion & Beauty'
+            'Arts > Food': 'Arts > Food'
+            'Arts > Performing Arts': 'Arts > Performing Arts'
+            'Arts > Visual Arts': 'Arts > Visual Arts'
+            Business: Business
+            'Business > Careers': 'Business > Careers'
+            'Business > Entrepreneurship': 'Business > Entrepreneurship'
+            'Business > Investing': 'Business > Investing'
+            'Business > Management': 'Business > Management'
+            'Business > Marketing': 'Business > Marketing'
+            'Business > Non-Profit': 'Business > Non-Profit'
+            Comedy: Comedy
+            'Comedy > Comedy Interviews': 'Comedy > Comedy Interviews'
+            'Comedy > Improv': 'Comedy > Improv'
+            'Comedy > Stand-Up': 'Comedy > Stand-Up'
+            Education: Education
+            'Education > Courses': 'Education > Courses'
+            'Education > How To': 'Education > How To'
+            'Education > Language Learning': 'Education > Language Learning'
+            'Education > Self-Improvement': 'Education > Self-Improvement'
+            Fiction: Fiction
+            'Fiction > Comedy Fiction': 'Fiction > Comedy Fiction'
+            'Fiction > Drama': 'Fiction > Drama'
+            'Fiction > Science Fiction': 'Fiction > Science Fiction'
+            Government: Government
+            History: History
+            'Health & Fitness': 'Health & Fitness'
+            'Health & Fitness > Alternative Health': 'Health & Fitness > Alternative Health'
+            'Health & Fitness > Fitness': 'Health & Fitness > Fitness'
+            'Health & Fitness > Medicine': 'Health & Fitness > Medicine'
+            'Health & Fitness > Mental Health': 'Health & Fitness > Mental Health'
+            'Health & Fitness > Nutrition': 'Health & Fitness > Nutrition'
+            'Health & Fitness > Sexuality': 'Health & Fitness > Sexuality'
+            'Kids & Family': 'Kids & Family'
+            'Kids & Family > Education for Kids': 'Kids & Family > Education for Kids'
+            'Kids & Family > Parenting': 'Kids & Family > Parenting'
+            'Kids & Family > Pets & Animals': 'Kids & Family > Pets & Animals'
+            'Kids & Family > Stories for Kids': 'Kids & Family > Stories for Kids'
+            Leisure: Leisure
+            'Leisure > Animation & Manga': 'Leisure > Animation & Manga'
+            'Leisure > Automotive': 'Leisure > Automotive'
+            'Leisure > Aviation': 'Leisure > Aviation'
+            'Leisure > Crafts': 'Leisure > Crafts'
+            'Leisure > Games': 'Leisure > Games'
+            'Leisure > Hobbies': 'Leisure > Hobbies'
+            'Leisure > Home & Garden': 'Leisure > Home & Garden'
+            'Leisure > Video Games': 'Leisure > Video Games'
+            Music: Music
+            'Music > Music Commentary': 'Music > Music Commentary'
+            'Music > Music History': 'Music > Music History'
+            'Music > Music Interviews': 'Music > Music Interviews'
+            News: News
+            'News > Business News': 'News > Business News'
+            'News > Daily News': 'News > Daily News'
+            'News > Entertainment News': 'News > Entertainment News'
+            'News > News Commentary': 'News > News Commentary'
+            'News > Politics': 'News > Politics'
+            'News > Sports News': 'News > Sports News'
+            'News > Tech News': 'News > Tech News'
+            'Religion & Spirituality': 'Religion & Spirituality'
+            'Religion & Spirituality > Buddhism': 'Religion & Spirituality > Buddhism'
+            'Religion & Spirituality > Christianity': 'Religion & Spirituality > Christianity'
+            'Religion & Spirituality > Hinduism': 'Religion & Spirituality > Hinduism'
+            'Religion & Spirituality > Islam': 'Religion & Spirituality > Islam'
+            'Religion & Spirituality > Judaism': 'Religion & Spirituality > Judaism'
+            'Religion & Spirituality > Religion': 'Religion & Spirituality > Religion'
+            'Religion & Spirituality > Spirituality': 'Religion & Spirituality > Spirituality'
+            Science: Science
+            'Science > Astronomy': 'Science > Astronomy'
+            'Science > Chemistry': 'Science > Chemistry'
+            'Science > Earth Sciences': 'Science > Earth Sciences'
+            'Science > Life Sciences': 'Science > Life Sciences'
+            'Science > Mathematics': 'Science > Mathematics'
+            'Science > Natural Sciences': 'Science > Natural Sciences'
+            'Science > Nature': 'Science > Nature'
+            'Science > Physics': 'Science > Physics'
+            'Science > Social Sciences': 'Science > Social Sciences'
+            'Society & Culture': 'Society & Culture'
+            'Society & Culture > Documentary': 'Society & Culture > Documentary'
+            'Society & Culture > Personal Journals': 'Society & Culture > Personal Journals'
+            'Society & Culture > Philosophy': 'Society & Culture > Philosophy'
+            'Society & Culture > Places & Travel': 'Society & Culture > Places & Travel'
+            'Society & Culture > Relationships': 'Society & Culture > Relationships'
+            Sports: Sports
+            'Sports > Baseball': 'Sports > Baseball'
+            'Sports > Basketball': 'Sports > Basketball'
+            'Sports > Cricket': 'Sports > Cricket'
+            'Sports > Fantasy Sports': 'Sports > Fantasy Sports'
+            'Sports > Football': 'Sports > Football'
+            'Sports > Golf': 'Sports > Golf'
+            'Sports > Hockey': 'Sports > Hockey'
+            'Sports > Rugby': 'Sports > Rugby'
+            'Sports > Running': 'Sports > Running'
+            'Sports > Soccer': 'Sports > Soccer'
+            'Sports > Swimming': 'Sports > Swimming'
+            'Sports > Tennis': 'Sports > Tennis'
+            'Sports > Volleyball': 'Sports > Volleyball'
+            'Sports > Wilderness': 'Sports > Wilderness'
+            'Sports > Wrestling': 'Sports > Wrestling'
+            Technology: Technology
+            'True Crime': 'True Crime'
+            'TV & Film': 'TV & Film'
+            'TV & Film > After Shows': 'TV & Film > After Shows'
+            'TV & Film > Film History': 'TV & Film > Film History'
+            'TV & Film > Film Interviews': 'TV & Film > Film Interviews'
+            'TV & Film > Film Reviews': 'TV & Film > Film Reviews'
+            'TV & Film > TV Reviews': 'TV & Film > TV Reviews'
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: 'Second Category'
+          type: select
+          icon: select
+          listable: hidden
+      -
+        handle: third_category
+        field:
+          options:
+            Arts: Arts
+            'Arts > Books': 'Arts > Books'
+            'Arts > Design': 'Arts > Design'
+            'Arts > Fashion & Beauty': 'Arts > Fashion & Beauty'
+            'Arts > Food': 'Arts > Food'
+            'Arts > Performing Arts': 'Arts > Performing Arts'
+            'Arts > Visual Arts': 'Arts > Visual Arts'
+            Business: Business
+            'Business > Careers': 'Business > Careers'
+            'Business > Entrepreneurship': 'Business > Entrepreneurship'
+            'Business > Investing': 'Business > Investing'
+            'Business > Management': 'Business > Management'
+            'Business > Marketing': 'Business > Marketing'
+            'Business > Non-Profit': 'Business > Non-Profit'
+            Comedy: Comedy
+            'Comedy > Comedy Interviews': 'Comedy > Comedy Interviews'
+            'Comedy > Improv': 'Comedy > Improv'
+            'Comedy > Stand-Up': 'Comedy > Stand-Up'
+            Education: Education
+            'Education > Courses': 'Education > Courses'
+            'Education > How To': 'Education > How To'
+            'Education > Language Learning': 'Education > Language Learning'
+            'Education > Self-Improvement': 'Education > Self-Improvement'
+            Fiction: Fiction
+            'Fiction > Comedy Fiction': 'Fiction > Comedy Fiction'
+            'Fiction > Drama': 'Fiction > Drama'
+            'Fiction > Science Fiction': 'Fiction > Science Fiction'
+            Government: Government
+            History: History
+            'Health & Fitness': 'Health & Fitness'
+            'Health & Fitness > Alternative Health': 'Health & Fitness > Alternative Health'
+            'Health & Fitness > Fitness': 'Health & Fitness > Fitness'
+            'Health & Fitness > Medicine': 'Health & Fitness > Medicine'
+            'Health & Fitness > Mental Health': 'Health & Fitness > Mental Health'
+            'Health & Fitness > Nutrition': 'Health & Fitness > Nutrition'
+            'Health & Fitness > Sexuality': 'Health & Fitness > Sexuality'
+            'Kids & Family': 'Kids & Family'
+            'Kids & Family > Education for Kids': 'Kids & Family > Education for Kids'
+            'Kids & Family > Parenting': 'Kids & Family > Parenting'
+            'Kids & Family > Pets & Animals': 'Kids & Family > Pets & Animals'
+            'Kids & Family > Stories for Kids': 'Kids & Family > Stories for Kids'
+            Leisure: Leisure
+            'Leisure > Animation & Manga': 'Leisure > Animation & Manga'
+            'Leisure > Automotive': 'Leisure > Automotive'
+            'Leisure > Aviation': 'Leisure > Aviation'
+            'Leisure > Crafts': 'Leisure > Crafts'
+            'Leisure > Games': 'Leisure > Games'
+            'Leisure > Hobbies': 'Leisure > Hobbies'
+            'Leisure > Home & Garden': 'Leisure > Home & Garden'
+            'Leisure > Video Games': 'Leisure > Video Games'
+            Music: Music
+            'Music > Music Commentary': 'Music > Music Commentary'
+            'Music > Music History': 'Music > Music History'
+            'Music > Music Interviews': 'Music > Music Interviews'
+            News: News
+            'News > Business News': 'News > Business News'
+            'News > Daily News': 'News > Daily News'
+            'News > Entertainment News': 'News > Entertainment News'
+            'News > News Commentary': 'News > News Commentary'
+            'News > Politics': 'News > Politics'
+            'News > Sports News': 'News > Sports News'
+            'News > Tech News': 'News > Tech News'
+            'Religion & Spirituality': 'Religion & Spirituality'
+            'Religion & Spirituality > Buddhism': 'Religion & Spirituality > Buddhism'
+            'Religion & Spirituality > Christianity': 'Religion & Spirituality > Christianity'
+            'Religion & Spirituality > Hinduism': 'Religion & Spirituality > Hinduism'
+            'Religion & Spirituality > Islam': 'Religion & Spirituality > Islam'
+            'Religion & Spirituality > Judaism': 'Religion & Spirituality > Judaism'
+            'Religion & Spirituality > Religion': 'Religion & Spirituality > Religion'
+            'Religion & Spirituality > Spirituality': 'Religion & Spirituality > Spirituality'
+            Science: Science
+            'Science > Astronomy': 'Science > Astronomy'
+            'Science > Chemistry': 'Science > Chemistry'
+            'Science > Earth Sciences': 'Science > Earth Sciences'
+            'Science > Life Sciences': 'Science > Life Sciences'
+            'Science > Mathematics': 'Science > Mathematics'
+            'Science > Natural Sciences': 'Science > Natural Sciences'
+            'Science > Nature': 'Science > Nature'
+            'Science > Physics': 'Science > Physics'
+            'Science > Social Sciences': 'Science > Social Sciences'
+            'Society & Culture': 'Society & Culture'
+            'Society & Culture > Documentary': 'Society & Culture > Documentary'
+            'Society & Culture > Personal Journals': 'Society & Culture > Personal Journals'
+            'Society & Culture > Philosophy': 'Society & Culture > Philosophy'
+            'Society & Culture > Places & Travel': 'Society & Culture > Places & Travel'
+            'Society & Culture > Relationships': 'Society & Culture > Relationships'
+            Sports: Sports
+            'Sports > Baseball': 'Sports > Baseball'
+            'Sports > Basketball': 'Sports > Basketball'
+            'Sports > Cricket': 'Sports > Cricket'
+            'Sports > Fantasy Sports': 'Sports > Fantasy Sports'
+            'Sports > Football': 'Sports > Football'
+            'Sports > Golf': 'Sports > Golf'
+            'Sports > Hockey': 'Sports > Hockey'
+            'Sports > Rugby': 'Sports > Rugby'
+            'Sports > Running': 'Sports > Running'
+            'Sports > Soccer': 'Sports > Soccer'
+            'Sports > Swimming': 'Sports > Swimming'
+            'Sports > Tennis': 'Sports > Tennis'
+            'Sports > Volleyball': 'Sports > Volleyball'
+            'Sports > Wilderness': 'Sports > Wilderness'
+            'Sports > Wrestling': 'Sports > Wrestling'
+            Technology: Technology
+            'True Crime': 'True Crime'
+            'TV & Film': 'TV & Film'
+            'TV & Film > After Shows': 'TV & Film > After Shows'
+            'TV & Film > Film History': 'TV & Film > Film History'
+            'TV & Film > Film Interviews': 'TV & Film > Film Interviews'
+            'TV & Film > Film Reviews': 'TV & Film > Film Reviews'
+            'TV & Film > TV Reviews': 'TV & Film > TV Reviews'
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: 'Third Category'
+          type: select
+          icon: select
+          listable: hidden
+  podcast_directory:
+    display: 'Podcast directory'
+    fields:
+      -
+        handle: type
+        field:
+          options:
+            episodic: Episodic
+            serial: Serial
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: 'How is your show formatted?'
+          type: select
+          icon: select
+          listable: hidden
+      -
+        handle: explicit
+        field:
+          options:
+            'yes': 'Yes'
+            'no': 'No'
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: 'Does your podcast include explicit language?'
+          type: select
+          icon: select
+          listable: hidden
+      -
+        handle: language
+        field:
+          options:
+            fr: FR
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: Language
+          type: select
+          icon: select
+          listable: hidden

@@ -1,0 +1,197 @@
+title: Episodes
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+          display: 'Episode Title'
+          instructions: 'Used in podcast players, e.g. Apple Podcasts, Spotify; this title will display in all podcast directories and players.'
+          listable: true
+          input_type: text
+          antlers: false
+      -
+        handle: subtitle
+        field:
+          input_type: text
+          antlers: false
+          display: 'Episode Subtitle'
+          type: text
+          icon: text
+          listable: hidden
+          instructions: 'Used in some podcast players, non-mandatory.'
+      -
+        handle: show_notes
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          display: 'Episode show notes'
+          type: bard
+          icon: bard
+          listable: hidden
+      -
+        handle: episode_summary
+        field:
+          antlers: false
+          display: 'Apple Podcasts Episode Summary'
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions: 'Optional summary for use in Apple Podcasts. Sorry, no HTML or links.'
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: template
+        field:
+          type: template
+          display: Template
+          default: episode
+          instructions: 'No need to change this.'
+          listable: false
+          hide_partials: true
+      -
+        handle: publish_date
+        field:
+          mode: single
+          time_enabled: true
+          time_required: true
+          earliest_date: '1900-01-01'
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+          display: 'Publish Date & Time'
+          type: date
+          icon: date
+          listable: hidden
+      -
+        handle: guid
+        field:
+          hidden: false
+          readonly: false
+          display: Guid
+          type: uuid
+          icon: code
+          listable: hidden
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          validate:
+            - required
+  options:
+    display: Options
+    fields:
+      -
+        handle: episode_type
+        field:
+          options:
+            full: Normal
+            trailer: Trailer
+            bonus: Bonus
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: 'Episode Type'
+          type: select
+          icon: select
+          listable: hidden
+          default: full
+          instructions: 'Most episodes will be ''normal'' episodes, but sometimes you''ll create show trailers or bonus content that displays differently depending on the listener''s podcast player.'
+      -
+        handle: season_number
+        field:
+          display: 'Season Number'
+          type: integer
+          icon: integer
+          listable: hidden
+          default: 1
+      -
+        handle: episode_number
+        field:
+          display: 'Episode Number'
+          type: integer
+          icon: integer
+          listable: hidden
+      -
+        handle: explicit
+        field:
+          options:
+            'no': 'No'
+            'yes': 'Yes'
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: Explicit
+          type: select
+          icon: select
+          listable: hidden
+          default: 'no'
+          instructions: 'If many of your episodes contain explicit language, set this to ''yes'' in show settings. It''s vital that you make sure this is right!'
+  media:
+    display: Media
+    fields:
+      -
+        handle: episode_file
+        field:
+          mode: grid
+          container: episodes
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Episode Audio File'
+          type: assets
+          icon: assets
+          listable: hidden
+      -
+        handle: episode_image
+        field:
+          mode: grid
+          container: assets
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Episode Image'
+          type: assets
+          icon: assets
+          listable: hidden

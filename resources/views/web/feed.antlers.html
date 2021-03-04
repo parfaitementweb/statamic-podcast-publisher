@@ -1,0 +1,24 @@
+{{ collection:episodes }}
+<item>
+    <title>{{ title }}</title>
+    <itunes:title>{{ title }}</itunes:title>
+    <description>{{ show_notes | entities_decode | strip_tags_with_spaces }}</description>
+    <content:encoded>{{ show_notes | cdata }}</content:encoded>
+    <link>{{ permalink | cdata }}</link>
+    <guid isPermaLink="false">{{ guid }}</guid>
+    {{ if episode_image }}
+    <itunes:image href="{{ episode_image | get:permalink }}"/>
+    {{ /if }}
+    <dc:creator>{{ podcast:author_name | cdata }}</dc:creator>
+    <pubDate>{{ date | format:r }}</pubDate>
+    {{ if episode_file }}
+    <enclosure url="{{ episode_file | get:permalink }}" length="{{ episode_file | get:size_bytes }}" type="{{ episode_file | mime_content_type }}"/>
+    {{ /if }}
+    <itunes:explicit>{{ explicit }}</itunes:explicit>
+    <itunes:episodeType>{{ episode_type }}</itunes:episodeType>
+    <itunes:season>{{ season_number }}</itunes:season>
+    <itunes:episode>{{ episode_number }}</itunes:episode>
+    <itunes:summary>{{ episode_summary | raw }}</itunes:summary>
+    <itunes:author>{{ podcast:author_name }}</itunes:author>
+</item>
+{{ /collection:episodes }}

@@ -1,0 +1,49 @@
+{{ xml_header }}
+{{ xml_stylesheet href="{{ config:app.url }}/vendor/statamic-podcast-publisher/style.xsl" }}
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+    <channel>
+        <atom:link href="{{ permalink }}" rel="self" type="application/rss+xml"/>
+        <title>{{ podcast:name | cdata }}</title>
+        {{ collection:episodes }}
+        <lastBuildDate>{{ last_modified | format:r }}</lastBuildDate>
+        {{ /collection:episodes }}
+        <generator>Statamic Podcast Publisher</generator>
+        <language>{{ podcast:language | cdata }}</language>
+        <copyright><![CDATA[All rights reserved]]></copyright>
+        <managingEditor>{{ podcast:author_email}} ({{ podcast:author_name }})</managingEditor>
+        <itunes:summary>{{ podcast:description | cdata }}</itunes:summary>
+        <image>
+            <url>{{ podcast:image | get:permalink }}</url>
+            <title>{{ podcast:name }}</title>
+            <link>
+            {{ config:app.url | cdata }}</link>
+        </image>
+        <itunes:image href="{{ podcast:image | get:permalink }}"/>
+        <itunes:owner>
+            <itunes:name>{{ podcast:author_name }}</itunes:name>
+            <itunes:email>{{ podcast:author_email }}</itunes:email>
+        </itunes:owner>
+        <itunes:author>{{ podcast:author_name }}</itunes:author>
+        <description>{{ podcast:description | entities_decode | strip_tags_with_spaces }}</description>
+        <link>
+        {{ config:app.url }}/</link>
+        <atom:link href="https://pubsubhubbub.appspot.com" rel="hub"/>
+        <itunes:subtitle>{{ podcast:subtitle |  cdata }}</itunes:subtitle>
+        <itunes:explicit>{{ podcast:explicit }}</itunes:explicit>
+        <itunes:type>{{ podcast:type }}</itunes:type>
+
+        {{ itunes_category value=podcast:main_category }}
+
+        {{ if podcast:second_category }}
+        {{ itunes_category value=podcast:second_category }}
+        {{ /if }}
+
+        {{ if podcast:third_category }}
+        {{ itunes_category value=podcast:third_category }}
+        {{ /if }}
+
+        <itunes:new-feed-url>{{ permalink }}</itunes:new-feed-url>
+
+        {{ template_content }}
+    </channel>
+</rss>
