@@ -80,4 +80,4 @@ And where you want to include the player:
 ## Can I see it running?
 
 I manage my own podcast feed and website using Podcast Publisher.  
-👉 Have a look at  [onpourrait.com](https://onpourrait.com/) see what the end result.
+👉 Have a look at  [onpourrait.com](https://onpourrait.com/) to see what the end-result could be.
