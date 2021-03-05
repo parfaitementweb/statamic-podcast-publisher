@@ -34,15 +34,17 @@ We rely on default Stamatic Collection Tags to manage your episodes. Is easy has
 We use a default Stamatic Blueprint to manage every field and value. Simply open the `Episode Blueprint` and select the field you cant. You can even customize its handle if you prefer.
 
 #### Can I have an embeddable audio player ?
-You can use any web audio player such as [Green Audio Player](https://github.com/greghub/green-audio-player). And include the following in your `<head>` section of your layout:
+You can use any web audio player such as [Green Audio Player](https://github.com/greghub/green-audio-player).  
+First, include their CDN in a script tag.
 ```
-<script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
-<script>
-    GreenAudioPlayer.init({
-        selector: '.player',
-        stopOthersOnPlay: true
-    });
-</script>
+https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js
+```
+Then, add this code in your `<head>` `<script>` section of your layout:
+```
+GreenAudioPlayer.init({
+    selector: '.player',
+    stopOthersOnPlay: true
+});
 ```
 
 And where you want to include the player:

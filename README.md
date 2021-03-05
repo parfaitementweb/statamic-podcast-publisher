@@ -3,8 +3,6 @@
 ![Statamic 3.0+](https://img.shields.io/badge/Statamic-3.0+-FF269E?style=for-the-badge&link=https://statamic.com)
 > The complete suite for managing and publishing your own podcast RSS feed 🤘
 
-![Statamic Podcast Publisher Logo](./.github/images/statamic-podcast-publisher.jpg)
-
 ## Features
 - **Automatic XML Podcast feed**, ready to be submitted.  
   ✨ Implementation follows _Apple Podcast guildines_.
@@ -49,15 +47,17 @@ We rely on default Stamatic Collection Tags to manage your episodes. Is easy has
 We use a default Stamatic Blueprint to manage every field and value. Simply open the `Episode Blueprint` and select the field you cant. You can even customize its handle if you prefer.
 
 #### Can I have an embeddable audio player ?
-You can use any web audio player such as [Green Audio Player](https://github.com/greghub/green-audio-player). And include the following in your `<head>` section of your layout:
+You can use any web audio player such as [Green Audio Player](https://github.com/greghub/green-audio-player).  
+First, include their CDN in a script tag.
 ```
-<script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
-<script>
-    GreenAudioPlayer.init({
-        selector: '.player',
-        stopOthersOnPlay: true
-    });
-</script>
+https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js
+```
+Then, add this code in your `<head>` `<script>` section of your layout:
+```
+GreenAudioPlayer.init({
+    selector: '.player',
+    stopOthersOnPlay: true
+});
 ```
 
 And where you want to include the player:
@@ -69,13 +69,13 @@ And where you want to include the player:
 </div>
 ```
 
-## What does it look like?
+## What does your addon look like?
 
-![Statamic Podcast Settings](./.github/images/podcast-publisher-settings.png)
-![Statamic Podcast Episode](./.github/images/podcast-publisher-episode.png)
-![Statamic Podcast Episode Second](./.github/images/podcast-publisher-episode-second.png)
-![Statamic Podcast Dashboard](./.github/images/podcast-publisher-dashboard.png)
-![Statamic Podcast XML](./.github/images/podcast-publisher-xml-output.png)
+![Statamic Podcast Settings](https://parfaitementweb.com/statamic/statamic-podcast-publisher/podcast-publisher-settings.png)
+![Statamic Podcast Episode](https://parfaitementweb.com/statamic/statamic-podcast-publisher/podcast-publisher-episode.png)
+![Statamic Podcast Episode Second](https://parfaitementweb.com/statamic/statamic-podcast-publisher/podcast-publisher-episode-second.png)
+![Statamic Podcast Dashboard](https://parfaitementweb.com/statamic/statamic-podcast-publisher/podcast-publisher-dashboard.png)
+![Statamic Podcast XML](https://parfaitementweb.com/statamic/statamic-podcast-publisher/podcast-publisher-xml-output.png)
 
 ## Can I see it running?
 
