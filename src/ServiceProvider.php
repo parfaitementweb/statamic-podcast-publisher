@@ -87,7 +87,7 @@ class ServiceProvider extends AddonServiceProvider
                         'title' => 'Podcast Feed',
                         'content_type' => 'xml',
                         'layout' => 'podcast/xml',
-                        'template' => 'podcast\feed',
+                        'template' => 'podcast/feed',
                     ])
                     ->save();
             }
