@@ -9,7 +9,7 @@
         <p>{!! __('statamic-podcast-publisher::cp.introduction') !!}</p>
     </div>
 
-    <div class="flex flex-col lg:flex-row justify-between my-3 lg:space-x-2">
+    <div class="flex flex-col lg:flex-row justify-between my-3 lg:space-x-2 mb-6">
         <div>
             <h2 class="mb-1">{{ __('statamic-podcast-publisher::cp.episodes') }}</h2>
 
@@ -52,8 +52,6 @@
         </div>
     </div>
 
-    <div class="text-center mt-6">
-        <a href="https://www.parfaitementweb.com/?utm_source=statamic-cp-podcast-publisher" target="_blank" class="bg-white rounded-full px-3 py-1 shadow-sm text-xs text-grey-60">{!! __('statamic-podcast-publisher::cp.footer') !!}</a>
-    </div>
+    @include('statamic-podcast-publisher::cp.partials.footer')
 
 @stop
