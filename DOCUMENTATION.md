@@ -4,17 +4,30 @@
 
 We have made things easy for you start. Here is a quick summary of all things you need to know.
 
-1. **Edit your podcast information.**  
+1. **Install the addon**  
+   Simply run `composer require parfaitementweb/statamic-podcast-publisher`  
+   You also can follow the [official Statamic help guide](https://statamic.dev/addons#installing-addons)
+
+
+2. **Publish the assets**
+   Using the following command: `php artisan vendor:publish --tag=statamic-podcast-publisher`
+
+
+3. Set the **APP_URL** value accordingly in your `.env` file.
+This value is used to generate absolute path in your XML feed.
+   
+
+4. **Edit your podcast information.**  
    Choose your name, description, language and a beautiful image.  
    Podcast settings is a customizable Statamic Global set.
 
 
-2. **Add an episode.**  
+5. **Add an episode.**  
    Choose the audio file, add show notes and select the publishing date.  
    Episodes are stored in a customizable Statamic Collection within it's dedicated blueprint.
 
 
-3. **Submit your feed.**  
+6. **Submit your feed.**  
    Submit your feed URL to any podcast distributors (Apple, Gooogle, Spotify). You have complete control and are not limited here.  
    We've automatically created a Feed page and linked to the correct layout.
 
