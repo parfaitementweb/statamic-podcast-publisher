@@ -1,6 +1,6 @@
 <?php
 
-namespace Parfaitement\Podcast\Tags;
+namespace Parfaitementweb\StatamicPodcastPublisher\Tags;
 
 use Statamic\Tags\Tags;
 

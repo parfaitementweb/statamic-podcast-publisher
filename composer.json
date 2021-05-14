@@ -3,7 +3,7 @@
     "description": "Statamic addon for publishing your podcast",
     "autoload": {
         "psr-4": {
-            "Parfaitement\\Podcast\\": "src"
+            "Parfaitementweb\\StatamicPodcastPublisher\\": "src"
         }
     },
     "authors": [
@@ -21,7 +21,7 @@
         },
         "laravel": {
             "providers": [
-                "Parfaitement\\Podcast\\ServiceProvider"
+                "Parfaitementweb\\StatamicPodcastPublisher\\ServiceProvider"
             ]
         }
     },

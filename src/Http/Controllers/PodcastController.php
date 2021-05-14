@@ -1,6 +1,6 @@
 <?php
 
-namespace Parfaitement\Podcast\Http\Controllers;
+namespace Parfaitementweb\StatamicPodcastPublisher\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Parfaitement\Podcast\Modifiers;
+namespace Parfaitementweb\StatamicPodcastPublisher\Modifiers;
 
 use Statamic\Modifiers\Modifier;
 

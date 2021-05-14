@@ -1,13 +1,13 @@
 <?php
 
-namespace Parfaitement\Podcast;
+namespace Parfaitementweb\StatamicPodcastPublisher;
 
-use Parfaitement\Podcast\Modifiers\EntitiesDecode;
-use Parfaitement\Podcast\Modifiers\MimeContentType;
-use Parfaitement\Podcast\Modifiers\Stripslashes;
-use Parfaitement\Podcast\Modifiers\StripTagsWithSpaces;
-use Parfaitement\Podcast\Tags\ItunesCategory;
-use Parfaitement\Podcast\Tags\XmlStylesheet;
+use Parfaitementweb\StatamicPodcastPublisher\Modifiers\EntitiesDecode;
+use Parfaitementweb\StatamicPodcastPublisher\Modifiers\MimeContentType;
+use Parfaitementweb\StatamicPodcastPublisher\Modifiers\Stripslashes;
+use Parfaitementweb\StatamicPodcastPublisher\Modifiers\StripTagsWithSpaces;
+use Parfaitementweb\StatamicPodcastPublisher\Tags\ItunesCategory;
+use Parfaitementweb\StatamicPodcastPublisher\Tags\XmlStylesheet;
 use Statamic\Facades\Collection;
 use Statamic\Facades\CP\Nav;
 use Statamic\Facades\Entry;
