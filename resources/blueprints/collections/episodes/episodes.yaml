@@ -78,7 +78,7 @@ sections:
         field:
           type: template
           display: Template
-          default: episode
+          default: podcast/episode
           instructions: 'No need to change this.'
           listable: false
           hide_partials: true
