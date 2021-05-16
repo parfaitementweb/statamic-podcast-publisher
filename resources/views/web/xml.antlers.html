@@ -4,9 +4,7 @@
     <channel>
         <atom:link href="{{ permalink }}" rel="self" type="application/rss+xml"/>
         <title>{{ podcast:name | cdata }}</title>
-        {{ collection:episodes }}
         <lastBuildDate>{{ last_modified | format:r }}</lastBuildDate>
-        {{ /collection:episodes }}
         <generator>Statamic Podcast Publisher</generator>
         <language>{{ podcast:language | cdata }}</language>
         <copyright><![CDATA[All rights reserved]]></copyright>
