@@ -13,6 +13,6 @@ class XmlStylesheet extends Tags
      */
     public function index()
     {
-        return '<?xml-stylesheet href="' . $this->params->get('href') .'" type="text/xsl"?>';
+        return '<?xml-stylesheet href="' . url($this->params->get('href')) .'" type="text/xsl"?>';
     }
 }
