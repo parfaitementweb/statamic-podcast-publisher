@@ -17,6 +17,6 @@ class EntitiesDecode extends Modifier
      */
     public function index($value, $params, $context)
     {
-        return html_entity_decode($value, ENT_HTML5, 'UTF-8');
+        return html_entity_decode(htmlspecialchars($value, ENT_XML1));
     }
 }
